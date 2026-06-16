@@ -1,0 +1,20 @@
+[
+  {
+    "id": "risk-analysis",
+    "prompt": "分析当前高风险项目并给出预警",
+    "expected_tools": ["search_knowledge", "analyze_project_risks"],
+    "expected_keywords": ["风险", "工单"]
+  },
+  {
+    "id": "weekly-report",
+    "prompt": "生成本周企业经营周报",
+    "expected_tools": ["get_dashboard_metrics", "analyze_project_risks", "generate_weekly_report"],
+    "expected_keywords": ["经营周报", "待审批"]
+  },
+  {
+    "id": "ticket-routing",
+    "prompt": "请把 4 号紧急工单自动派单",
+    "expected_tools": ["route_ticket"],
+    "expected_keywords": ["分派", "工单"]
+  }
+]

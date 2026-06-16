@@ -1,0 +1,12 @@
+services:
+  cs599-project:
+    build: .
+    container_name: cs599-project
+    ports:
+      - "8000:8000"
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8000
+      AGENT_DISABLE_LLM: 1
+    volumes:
+      - ./data:/app/data

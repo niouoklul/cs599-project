@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS599 企业项目协同 Agent</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <section id="login-screen" class="login-shell">
+    <form id="login-form" class="login-panel">
+      <p class="eyebrow">CS599 Final Project</p>
+      <h1>企业项目协同 Agent</h1>
+      <label>
+        用户名
+        <input name="username" autocomplete="username" value="admin" required>
+      </label>
+      <label>
+        密码
+        <input name="password" type="password" autocomplete="current-password" value="123456" required>
+      </label>
+      <button type="submit">登录系统</button>
+      <p id="login-error" class="form-error"></p>
+      <p class="muted">演示账号：admin / manager / finance / staff，密码均为 123456</p>
+    </form>
+  </section>
+
+  <section id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand">
+        <strong>CS599</strong>
+        <span>Agent 改造演示</span>
+      </div>
+      <nav id="nav"></nav>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Enterprise Application + Agentic AI</p>
+          <h2 id="page-title">看板</h2>
+        </div>
+        <div class="user-chip">
+          <span id="user-name"></span>
+          <button id="logout-btn" type="button">退出</button>
+        </div>
+      </header>
+      <main id="content" class="content"></main>
+    </div>
+  </section>
+
+  <dialog id="entity-dialog">
+    <form id="entity-form" method="dialog">
+      <header>
+        <h3 id="dialog-title"></h3>
+        <button type="button" id="dialog-close" aria-label="关闭">×</button>
+      </header>
+      <div id="form-fields" class="form-grid"></div>
+      <p id="form-error" class="form-error"></p>
+      <footer>
+        <button type="button" id="dialog-cancel">取消</button>
+        <button type="submit">保存</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

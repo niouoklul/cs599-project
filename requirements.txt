@@ -1,0 +1,5 @@
+# Runtime web demo uses only the Python standard library.
+# Python 3.10+ is recommended.
+#
+# Optional documentation dependency:
+reportlab>=4.5.1
